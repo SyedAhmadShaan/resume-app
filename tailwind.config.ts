@@ -15,7 +15,8 @@ const config: Config = {
       "grey-light": "#FAFAFA",
       "green-light": "#d2eff1",
       white: "#fff",
-      teal: "#5eead4",
+      teal: "#14b8a6",
+      "teal-500": "#14b8a6",
     },
     fontFamily: {
       sans: ["Georgia", "sans-serif"],

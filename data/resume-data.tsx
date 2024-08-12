@@ -33,11 +33,11 @@ export const skills = {
     { icon: "⌛️", text: "Time management" },
   ],
   hard: [
-    { icon: "ʦ", text: "TypeScript" },
+    { icon: "🇹🇸", text: "TypeScript" },
     { icon: "💻", text: "NextJs" },
-    { icon: "🚀", text: "React" },
-    { icon: "💾", text: "SQL" },
-    { icon: "💾", text: "noSQL" },
+    { icon: "💾", text: "Tailwind CSS" },
+    { icon: "⚛️", text: "React" },
+    { icon: "🛢️", text: "SQL" },
     { icon: "📈", text: "Data Analytics" },
   ],
 };
