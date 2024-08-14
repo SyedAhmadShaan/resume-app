@@ -5,18 +5,22 @@ import Header from "./components/header";
 
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className='flex flex-col sm:flex-row'>
+	return (
+		<html>
+			<head />
+
+			<body className='flex flex-col sm:flex-row'>
 				<Sidebar data={personalData} />
-				<main className='grow-full p-8 sm:p-8 w-full sm:basis-2/3  ml-auto'>
+				<main className='grow-full p-8 sm:p-16 w-full sm:basis-2/3  ml-auto'>
+                    <Header/>
+					<div className="divider"></div>
 					{children}
 				</main>
 			</body>
-    </html>
-  );
+		</html>
+	);
 }
