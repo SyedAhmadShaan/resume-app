@@ -16,63 +16,45 @@ const Sidebar = ({ data }: SidebarProps) => {
   const { name, role, education, contactLinks } = data;
 
   return (
-    <div className="bg-teal flex flex-col items-center w-full sm:w-1/3 h-auto p-6 sm:justify-start">
-      <div className="text-white flex flex-col items-center">
+    <aside className="bg-teal text-white w-full sm:w-1/3 p-6 sm:p-8 border-r border-teal-700 shadow-md">
+      <div className="flex flex-col items-center">
         <Image
           priority
-          width={300}
-          height={300}
-          className="rounded-full mb-6"
+          width={270}
+          height={270}
+          className="rounded-full mb-6 border-4"
           src="/photo.png"
-          alt="resume-profilephoto.png"
-          aria-label="resume-profilephoto.png"
+          alt="Profile Photo"
+          aria-label="Profile Photo"
         />
-        <h1 className="text-2xl sm:text-3xl mb-2">{name}</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-2">{name}</h1>
         <h2 className="text-xl sm:text-2xl mb-4">{role}</h2>
-        <p className="text-center mb-1 sm:mb-2">{education[0]}</p>
-        <p className="text-center mb-1 sm:mb-2">{education[1]}</p>
-        <div className="text-white text-center mt-6 sm:mt-8 w-full">
-          <h3 className="text-lg sm:text-xl mb-4">CONTACT ME</h3>
-          <div className="flex justify-center gap-4">
-            <Link
-              target="_blank"
-              className="icons-contactme"
-              href={contactLinks?.[0]}
-              aria-label={"email link"}
-            >
-              <Envelope />
-            </Link>
-
-            <Link
-              target="_blank"
-              className="icons-contactme"
-              href={contactLinks?.[1]}
-              aria-label={"Linkedin link"}
-            >
-              <Linkedin />
-            </Link>
-
-            <Link
-              target="_blank"
-              className="icons-contactme"
-              href={contactLinks?.[2]}
-              aria-label={"Github link"}
-            >
-              <Github />
-            </Link>
-
-            <Link
-              target="_blank"
-              className="icons-contactme"
-              href={contactLinks?.[3]}
-              aria-label={"whatsapp link"}
-            >
-              <Whatsapp />
-            </Link>
+        <div className="text-center mb-6">
+          {education.map((item, index) => (
+            <p key={index} className="mb-1">{item}</p>
+          ))}
+        </div>
+        <div className="text-center">
+          <h3 className="text-lg sm:text-xl font-semibold mb-4">Contact Me</h3>
+          <div className="flex gap-4 justify-center">
+            {contactLinks.map((link, index) => {
+              const icons = [<Envelope key="email" />, <Linkedin key="linkedin" />, <Github key="github" />, <Whatsapp key="whatsapp" />];
+              return (
+                <Link
+                  key={index}
+                  target="_blank"
+                  className="text-white hover:text-yellow-300 transition-colors"
+                  href={link}
+                  aria-label={`Contact link ${index}`}
+                >
+                  {icons[index]}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 

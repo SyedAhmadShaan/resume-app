@@ -2,18 +2,18 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-grey text-black flex flex-col sm:flex-row w-full font-bold font-sans p-4 sm:p-8 mb-10">
-      <div className="flex flex-col sm:flex-row md:gap-24 sm:gap-8 w-full justify-evenly sm:justify-start">
-        <Link href="/" className="hover:text-teal transition-colors">
+    <header className="bg-teal text-yellow font-display font-bold w-full sm:w-2/3 mx-auto p-4 sm:p-6 md:p-8 shadow-lg rounded-lg overflow-x-auto">
+      <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <Link href="/" className="hover:text-white transition-colors text-center text-xl">
           Home
         </Link>
-        <Link href="/my-projects" className="hover:text-teal transition-colors">
+        <Link href="/my-projects" className="hover:text-white transition-colors text-center text-xl">
           Projects
         </Link>
-        <Link href="/my-certifications" className="hover:text-teal transition-colors">
+        <Link href="/my-certifications" className="hover:text-white transition-colors text-center text-xl">
           Certifications
         </Link>
-        <Link href="/my-hobbies" className="hover:text-teal transition-colors">
+        <Link href="/my-hobbies" className="hover:text-white transition-colors text-center text-xl">
           Hobbies
         </Link>
       </div>

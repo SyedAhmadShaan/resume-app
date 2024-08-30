@@ -6,13 +6,11 @@ import ProfessionalExperience from "./components/professional-experience";
 
 const Page: React.FC = () => {
 	return (
-		<div className="flex flex-col sm:flex-row min-h-screen">
-			{/* Sidebar: Use w-full for small screens and w-1/3 for larger screens */}
-			
-			
-			{/* Main Content: Takes up the remaining space */}
+		<div className="flex flex-col sm:flex-row min-h-screen py-10">
 			<div>
-				<AboutMe data={aboutMe} skills={skills} />
+				<AboutMe data={aboutMe} 
+				skills={skills} />
+				<span/>
 				<ProfessionalExperience data={professionalData} />
 			</div>
 		</div>
